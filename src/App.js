@@ -88,9 +88,9 @@ function App() {
   return (
     <div className="App">
       <div id="drum-machine">
-        <div id="display">{displayText}</div>
         <div className="drum-pads">
           {drums.map((drumpad) => (
+        
             <div
               key={drumpad.keyText}
               id={drumpad.soundSrc}
@@ -106,6 +106,7 @@ function App() {
             </div>
           ))}
         </div>
+        <div id="display">{displayText}</div>
       </div>
     </div>
   );

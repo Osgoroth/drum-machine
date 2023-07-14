@@ -5,14 +5,37 @@
   height: 100vh;
 }
 
+#drum-machine { 
+  height: 40vh;
+  min-width: 600px;
+  
+  
+  display: flex;
+  flex-direction: row;
+  background-color: #49D49D;
+  
+  
+  border-radius: 15px;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 25px;
+  
+
+}
 
 .drum-pads {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  height: 300px;
 }
 
 .drum-pad {
-  border: 1px solid red;
+  border: 5px solid #69EBD0;
+  background-color: #95F9E3;
+  opacity: 0.5;
+  border-radius: 20px;
   width: 100px;
   height: 100px;
   display: flex;
@@ -20,6 +43,28 @@
   justify-content: center;
 }
 
+.drum-pad:active {
+  background-color: #69EBD0;
+  border: 5px solid #95F9E3;
+}
+
+#display {
+  width: 150px;
+  min-height: 54px;
+  padding: 15px;
+  text-align: center;
+  
+  background-color: #558564;
+}
+
+@media only screen and (max-width: 600px) {
+ #drum-machine {
+    display: flex;
+    flex-direction: column;
+    min-width: 90vw;
+    height: 80vh;
+ }
+}
 
 
 
