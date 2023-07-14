@@ -5,13 +5,17 @@ function App() {
   const [displayText, setDisplayText] = useState("");
   const keys = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
   useEffect(() => {
-    document.addEventListener("keydown", (event) => {
-      const key = event.key.toUpperCase();
-      if (keys.includes(key)) {
-        handleClick(key);
-      }
-    });
-  }, []);
+    document.addEventListener(
+      "keydown",
+      (event) => {
+        const key = event.key.toUpperCase();
+        if (keys.includes(key)) {
+          handleClick(key);
+        }
+      },
+      [handleClick, keys]
+    );
+  });
   const drums = [
     {
       keyCode: 81,
@@ -90,7 +94,6 @@ function App() {
       <div id="drum-machine">
         <div className="drum-pads">
           {drums.map((drumpad) => (
-        
             <div
               key={drumpad.keyText}
               id={drumpad.soundSrc}
