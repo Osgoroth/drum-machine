@@ -78,7 +78,7 @@ function App() {
     const soundText = drums.find((drum) => drum.keyText === selector).soundName;
 
     // set the display text
-    console.log(soundText);
+    // console.log(soundText);
     audio.type = "audio/mp3";
     // audio.load();
     try {
@@ -92,24 +92,37 @@ function App() {
   return (
     <div className="App">
       <div id="drum-machine">
-        <div className="drum-pads">
-          {drums.map((drumpad) => (
-            <div
-              key={drumpad.keyText}
-              id={drumpad.soundSrc}
-              className="drum-pad"
-              onClick={() => handleClick(drumpad.keyText)}
-            >
-              {drumpad.keyText}
-              <audio
-                id={drumpad.keyText}
-                className="clip"
-                src={drumpad.soundSrc}
-              ></audio>
-            </div>
-          ))}
+        <div className="header">
+          <h1 id="brand">SOUNDMASTER</h1>
+          <h1 id="model">DM-919</h1>
         </div>
-        <div id="display">{displayText}</div>
+        <div className="machine-wrapper">
+          <div id="display">
+            <div className="display-text">{displayText}</div>
+          </div>
+          <div className="drum-pads">
+            {drums.map((drumpad) => (
+              <div className="button-wrapper" key={drumpad.keyText}>
+                <div
+                  id={drumpad.soundSrc}
+                  className="drum-button"
+                  onClick={() => handleClick(drumpad.keyText)}
+                >
+                  {drumpad.keyText}
+                  <audio
+                    id={drumpad.keyText}
+                    className="clip"
+                    src={drumpad.soundSrc}
+                  ></audio>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="footer">
+          <p>Created by David Lucas</p>
+          <p>Inspired by Roland TR-909</p>
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,48 @@
+$pale-silver: #c9c7af;
+$dirty-white: #e3e1c9;
+$beige: #eef1db;
+$beige-dark: #cacdb8;
+$deep-space-sparkle: #485b63;
+//source: https://www.schemecolor.com/retro-computer-neutrals.php
+
+// main colours
+$background: #dbe1d9;
+$background-side: #75917d;
+$background-bottom: #5f7c69;
+
+// text/ display
+$bright-orange: #eb5a38;
+$lcd-background: #550810;
+
+// button colours
+$button-main: #9db2b6;
+$button-side: #778f7e;
+$button-bottom: #57675c;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 .App {
   display: flex;
   align-items: center;
@@ -5,73 +50,112 @@
   height: 100vh;
 }
 
-#drum-machine { 
-  height: 40vh;
-  min-width: 600px;
-  
-  
+#drum-machine {
+  width: 90%;
+  max-width: 700px;
   display: flex;
-  flex-direction: row;
-  background-color: #49D49D;
-  
-  
-  border-radius: 15px;
+  flex-direction: column;
+  background-color: $background;
+  border-left: 1rem solid $background-side;
+  border-right: 1rem solid $background-side;
+  border-bottom: 1rem solid $background-bottom;
   justify-content: space-evenly;
   align-items: center;
+  padding: 0.25rem;
 
-  padding: 25px;
-  
+  .header {
+    width: 90%;
+    height: 30%;
+    font-family: TR-909;
+    #brand {
+      width: 100%;
+      text-align: left;
 
+      font-size: 3rem;
+      color: $bright-orange;
+    }
+
+    #model {
+      width: 100%;
+      text-align: right;
+
+      font-size: 4rem;
+    }
+  }
+  .machine-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    font-family: TR-909;
+  }
 }
 
 .drum-pads {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
   width: 300px;
   height: 300px;
 }
 
-.drum-pad {
-  border: 5px solid #69EBD0;
-  background-color: #95F9E3;
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drum-button {
+  border-style: solid;
+  border-color: $button-side;
+  border-width: 0 1rem 1rem 1rem;
+  background-color: $button-main;
   opacity: 0.5;
   border-radius: 20px;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: DS-DIGITAL;
+  font-size: 3rem;
 }
 
-.drum-pad:active {
-  background-color: #69EBD0;
-  border: 5px solid #95F9E3;
+.drum-button:active {
+  background-color: $button-side;
 }
 
 #display {
   width: 150px;
-  min-height: 54px;
-  padding: 15px;
-  text-align: center;
-  
-  background-color: #558564;
+  min-height: 60px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $bright-orange;
+  background-color: $lcd-background;
+  margin-bottom: 2rem;
+
+  .display-text {
+    width: 100%;
+    font-family: DS-Digital;
+    font-size: 3rem;
+    text-align: left;
+  }
 }
 
-@media only screen and (max-width: 600px) {
- #drum-machine {
-    display: flex;
-    flex-direction: column;
-    min-width: 90vw;
-    height: 80vh;
- }
+@media (min-width: 600px) {
+  .App {
+    #drum-machine {
+      .machine-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-

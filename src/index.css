@@ -1,13 +1,28 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: "DS-Digital";
+  src: local("DS-DIGI"), url("./fonts/DS-DIGI.TTF") format("truetype");
+  font-weight: normal;
+}
+/* source: https://www.dafont.com/ds-digital.font */
+
+@font-face {
+  font-family: "TR-909";
+  src: local("TR-909"), url("./fonts/TR-909.ttf") format("truetype");
+  font-weight: normal;
+}
+
+/* source: https://www.dafont.com/tr909.font */
