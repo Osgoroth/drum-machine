@@ -48,6 +48,12 @@ html {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background: rgb(229, 207, 160);
+  background: linear-gradient(
+    90deg,
+    rgba(229, 207, 160, 1) 0%,
+    rgba(102, 75, 82, 1) 93%
+  );
 }
 
 #drum-machine {
