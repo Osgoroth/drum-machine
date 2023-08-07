@@ -1,4 +1,10 @@
+# Drum Machine
+
+![drum-machine](https://github.com/Osgoroth/drum-machine/assets/46662617/726b0e56-33cd-4176-8a7e-9957a51e03ca)
+
+
 # Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
