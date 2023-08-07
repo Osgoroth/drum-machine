@@ -1,7 +1,6 @@
 # Drum Machine
 
-![drum-machine](https://github.com/Osgoroth/drum-machine/assets/46662617/726b0e56-33cd-4176-8a7e-9957a51e03ca)
-
+![Screen Shot 2023-08-07 at 19 15 45](https://github.com/Osgoroth/drum-machine/assets/46662617/81c6dc9e-0039-4681-8aff-53bd075150c2)
 
 # Getting Started with Create React App
 
