@@ -82,6 +82,7 @@ function App() {
     audio.type = "audio/mp3";
     // audio.load();
     try {
+      audio.currentTime = 0; //rewind audio
       await audio.play();
       setDisplayText(soundText);
     } catch (err) {
